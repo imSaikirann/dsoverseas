@@ -1,26 +1,23 @@
-// components/sections/Hero.tsx
-import Image from "next/image";
 import { trustPoints, stats } from "@/lib/data";
 import { Button, Pill, Container } from "@/components/ui";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-canvas">
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/banner1.png"
-          alt="Hero background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[58%_center] [filter:brightness(0.62)_saturate(0.78)_contrast(1.02)] sm:object-center"
+    <section className="relative isolate min-h-screen overflow-hidden bg-canvas">
+      <div className="absolute inset-0 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center [filter:brightness(0.62)_saturate(0.78)_contrast(1.02)] sm:bg-center"
+          style={{
+            backgroundImage: "url('/banner1.png')",
+            backgroundPosition: "58% center",
+          }}
         />
         <div className="absolute inset-0 bg-black/52" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.5)_0%,rgba(10,10,10,0.16)_38%,rgba(10,10,10,0.62)_100%)]" />
       </div>
 
       <div
-        className="pointer-events-none absolute inset-0 -z-0"
+        className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
             "radial-gradient(ellipse 72% 45% at 50% -12%, rgba(201,169,110,0.12) 0%, transparent 68%), radial-gradient(ellipse 34% 26% at 82% 22%, rgba(255,255,255,0.06) 0%, transparent 64%)",
