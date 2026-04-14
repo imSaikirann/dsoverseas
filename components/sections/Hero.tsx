@@ -6,10 +6,9 @@ export default function Hero() {
     <section className="relative isolate min-h-screen overflow-hidden bg-canvas">
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center [filter:brightness(0.62)_saturate(0.78)_contrast(1.02)] sm:bg-center"
+          className="absolute inset-0 bg-cover bg-center [filter:brightness(0.62)_saturate(0.78)_contrast(1.02)] sm:bg-[position:58%_center]"
           style={{
             backgroundImage: "url('/banner1.png')",
-            backgroundPosition: "58% center",
           }}
         />
         <div className="absolute inset-0 bg-black/52" />
